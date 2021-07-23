@@ -1,0 +1,44 @@
+﻿@using ASP_MVC_CV_Prj.Models.Entity
+@model List<Experiences>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Experiences List</h2>
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Header</th>
+            <th scope="col">Subheader</th>
+            <th scope="col">Text</th>
+            <th scope="col"><span>Edit</span></th>
+            <th scope="col"><span>Delete</span></th>
+     
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var d in Model)
+        {
+
+        <tr>
+            <th scope="row">@d.ID</th>
+            <td>@d.Header</td>
+            <td>@d.SubHeader</td>
+            <td>@d.Text</td>
+            <td><a href="/Experience/GetExp/@d.ID" class="btn btn-warning">Edit</a></td>
+            <td><a href="/Experience/DeleteExp/@d.ID" class="btn btn-danger">Delete</a></td>
+        </tr>
+        }
+       
+    </tbody>
+</table>
+
+<a href="/experience/AddExp/" class="btn btn-info">Add New</a>

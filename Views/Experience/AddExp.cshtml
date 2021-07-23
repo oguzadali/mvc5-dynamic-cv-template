@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "AddExp";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>AddExp</h2>
+
+<div class="container">
+
+
+    <form method="post">
+
+        <div class="form-group">
+            <label for="inputName">Header</label>
+            <input type="text" class="form-control" id="inputName" name="Header">
+        </div>
+        <div class="form-group">
+            <label for="inputMail">Subheader</label>
+            <input type="text" class="form-control" id="inputMail" name="Subheader">
+        </div>
+        <div class="form-group">
+            <label for="inputSubject">Text</label>
+            <input type="text" class="form-control" id="inputSubject" name="Text">
+        </div>
+        <div class="form-group">
+            <label for="inputText">Date</label>
+            <input type="text" class="form-control" id="inputText" name="Date">
+        </div>
+       
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>

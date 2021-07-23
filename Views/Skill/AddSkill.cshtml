@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "AddSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container">
+<h2>AddSkill</h2>
+
+
+    <form method="post">
+
+        <div class="form-group">
+            <label for="inputName">Ability</label>
+            <input type="text" class="form-control" id="inputName" name="Ability">
+        </div>
+        <div class="form-group">
+            <label for="inputMail">Progress</label>
+            <input type="text" class="form-control" id="inputMail" name="Progress" placeholder="0-100 %">
+        </div>
+       
+
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>

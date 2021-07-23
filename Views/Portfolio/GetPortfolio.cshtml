@@ -1,0 +1,36 @@
+﻿
+@model ASP_MVC_CV_Prj.Models.Entity.Portfolio
+@{
+    ViewBag.Title = "Update Portfolio";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <h2>Update Portfolio </h2>
+    <form method="post">
+
+        @Html.Label("ID")
+        @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+        <br />
+        @Html.Label("Project Name")
+        @Html.TextBoxFor(x => x.ProjectName, new { @class = "form-control" })
+        <br />
+        @Html.Label("Project Details")
+        @Html.TextBoxFor(x => x.ProjectDetails, new { @class = "form-control" })
+        <br />
+        @Html.Label("Properties")
+        @Html.TextBoxFor(x => x.Properties, new { @class = "form-control" })
+        <br />
+        @Html.Label("Image")
+        @Html.TextBoxFor(x => x.Image, new { @class = "form-control" })
+        <br />
+        @Html.Label("LiveVersion")
+        @Html.TextBoxFor(x => x.LiveVersion, new { @class = "form-control" })
+        <br />
+        @Html.Label("Github Link")
+        @Html.TextBoxFor(x => x.GithubLink, new { @class = "form-control" })
+        <br />
+
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>

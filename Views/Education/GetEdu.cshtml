@@ -1,0 +1,38 @@
+﻿@model ASP_MVC_CV_Prj.Models.Entity.Education
+
+
+@*@model List<Experiences>*@
+
+
+@{
+    ViewBag.Title = "GetExp";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<div class="container">
+<h2>Update Education</h2>
+    <form method="post">
+
+        @Html.Label("ID")
+        @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+        <br />
+        @Html.Label("Header")
+        @Html.TextBoxFor(x => x.Header, new { @class = "form-control" })
+        <br />
+        @Html.Label("Subheader 1")
+        @Html.TextBoxFor(x => x.SubHeader1, new { @class = "form-control" })
+        <br />
+        @Html.Label("Subheader 2")
+        @Html.TextBoxFor(x => x.SubHeader2, new { @class = "form-control" })
+        <br />
+        @Html.Label("Date")
+        @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+        <br />
+       
+
+
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>

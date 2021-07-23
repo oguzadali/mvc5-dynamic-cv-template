@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "AddTool";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container">
+    <h2>Add Tool</h2>
+
+    <form method="post">
+
+        <div class="form-group">
+            <label for="inputName">Details</label>
+            <input type="text" class="form-control" id="inputName" name="Details">
+        </div>
+        <div class="form-group">
+            <label for="inputMail">Star (1-5)</label>
+            <input type="text" class="form-control" id="inputMail" name="Star">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>

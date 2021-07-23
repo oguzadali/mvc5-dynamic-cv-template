@@ -1,0 +1,17 @@
+﻿@using ASP_MVC_CV_Prj.Models.Entity
+@model List<SocialMediaLinks> 
+
+
+<div class="social-icons">
+  
+
+    @foreach (var d in Model)
+    {
+        if (@d.Show==true)
+        {
+             <a class="social-icon" href="@d.Link"><i class="@d.Icon"></i></a>
+        }     
+    }
+   
+</div>
+

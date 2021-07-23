@@ -1,0 +1,29 @@
+﻿@using ASP_MVC_CV_Prj.Models.Entity
+@model List<Experiences>
+
+
+<div class="resume-section-content">
+    <h2 class="mb-5">Experience</h2>
+
+    @foreach (var d in Model)
+    {
+
+    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+        <div class="flex-grow-1">
+            <h3 class="mb-0">@d.Header</h3>
+            <div class="subheading mb-3">@d.SubHeader</div>
+            @*<p>@d.Text</p>*@
+            <ul class="p-0" style="list-style:none">
+                @{ string[] c = @d.Text.Split('/'); }
+                @foreach (var u in c)
+                {
+                    <li class="mb-1"> @u </li>
+                }
+            </ul>
+        </div>
+        <div class="flex-shrink-0"><span class="text-cv-color1">@d.Date</span></div>
+    </div>
+    }
+
+    
+</div>

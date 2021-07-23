@@ -1,0 +1,36 @@
+﻿
+@using ASP_MVC_CV_Prj.Models.Entity
+@model List<Tools>
+
+@{
+    ViewBag.Title = "Tools List";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Tools List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Details</th>
+            <th scope="col">Stars</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var d in Model)
+        {
+            <tr>
+                <th scope="row">@d.ID</th>
+                <td>@d.Details</td>
+                <td>@d.Star</td>
+
+                <td><a href="/Tool/GetTool/@d.ID" class="btn btn-warning">Edit</a></td>
+                <td><a href="/Tool/DeleteTool/@d.ID" class="btn btn-danger">Delete</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+<a href="/Tool/AddTool/" class="btn btn-info">Add New</a>

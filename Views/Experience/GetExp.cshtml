@@ -1,0 +1,35 @@
+﻿@model ASP_MVC_CV_Prj.Models.Entity.Experiences
+@*@model List<Experiences>*@
+
+
+@{
+    ViewBag.Title = "GetExp";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h2>UpdateExp</h2>
+
+<div class="container">
+    <form method="post">
+
+      @Html.Label("ID")
+      @Html.TextBoxFor(x=>x.ID, new { @class = "form-control", @readonly = "readonly" })
+        <br /> 
+        @Html.Label("Header")
+      @Html.TextBoxFor(x=>x.Header, new { @class = "form-control" })
+        <br />  
+        @Html.Label("Subheader")
+      @Html.TextBoxFor(x=>x.SubHeader, new { @class = "form-control" })
+        <br />
+        @Html.Label("Text")
+      @Html.TextBoxFor(x=>x.Text, new { @class = "form-control" })
+        <br />
+        @Html.Label("Date")
+      @Html.TextBoxFor(x=>x.Date, new { @class = "form-control" })
+        <br />
+
+
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>

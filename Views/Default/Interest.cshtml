@@ -1,0 +1,18 @@
+﻿@using ASP_MVC_CV_Prj.Models.Entity
+@model List<Interests>
+
+
+<div class="resume-section-content">
+    <h2 class="mb-5">Interests</h2>
+    <ul class="list-inline dev-icons">
+        @foreach (var d in Model)
+        {
+
+        <li class="list-inline-item"><i class="@d.Icon"></i></li>
+        }
+
+    </ul>
+
+
+</div>
+

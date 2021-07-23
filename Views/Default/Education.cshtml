@@ -1,0 +1,30 @@
+﻿@using ASP_MVC_CV_Prj.Models.Entity
+@model List<Education>
+
+
+
+
+<div class="resume-section-content">
+    <h2 class="mb-5">Education</h2>
+    @foreach (var d in Model.OrderByDescending(x=>x.ID))
+    {
+    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+        <div class="flex-grow-1">
+            <h3 class="mb-0">@d.Header</h3>
+            <div class="subheading mb-3">@d.SubHeader1 </div>
+            <ul class="p-0" style="list-style:none">
+
+            @{ string[] c = @d.SubHeader2.Split('/'); }
+            @foreach (var u in c)
+            {
+                <li class="mb-1"> @u </li>
+            }
+            </ul>
+            @*<div>@d.SubHeader2</div>*@
+            @*<p>GPA: 3.23</p>*@
+        </div>
+        <div class="flex-shrink-0"><span class="text-cv-color1">@d.Date</span></div>
+    </div>
+    }
+    
+</div>

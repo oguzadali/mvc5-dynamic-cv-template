@@ -1,0 +1,61 @@
+﻿
+@using ASP_MVC_CV_Prj.Models.Entity
+@model List<About>
+
+@{
+    ViewBag.title = "Admin Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>About</h2>
+
+<form method="post">
+    @foreach (var d in Model)
+    {
+        <div class="d-none" id="admin-page-name">@d.Name @d.Surname</div>
+        <div class="d-none" id="admin-page-image">@d.Image</div>
+
+        <label>Name</label>
+        <input type="text" value="@d.Name" name="Name" class="form-control" />
+        <br />
+        <label>Surname</label>
+        <input type="text" value="@d.Surname" name="Surname" class="form-control" />
+        <br />
+        <label>Adress</label>
+        <input type="text" value="@d.Adress" name="Adress" class="form-control" />
+        <br />
+        <label>I'm</label>
+        <input type="text" value="@d.I_am_" name="I_am_" class="form-control" />
+        <br />
+        <label>Phone</label>
+        <input type="text" value="@d.Phone" name="Phone" class="form-control" />
+        <br />
+        <label>Mail</label>
+        <input type="text" value="@d.Mail" name="Mail" class="form-control" />
+        <br />
+        <label>About</label>
+        <textarea rows="5" class="form-control" name="Text">@d.Text</textarea>
+        <br />
+        <label>Image</label>
+        <input type="text" value="@d.Image" name="Image" class="form-control" />
+        <br />
+
+    }
+    <br />
+    
+    <button type="submit" class="btn btn-info">Update</button>
+
+</form>
+
+
+<script>
+    var nameCookie = document.querySelector("#admin-page-name").textContent
+    var imageCookie = document.querySelector("#admin-page-image").textContent
+    localStorage.setItem("username", `${nameCookie}`);
+    localStorage.setItem("userimage", `${imageCookie}`);
+
+  
+</script>
+
+

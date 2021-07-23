@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "AddPortfolio";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container">
+    <h2>Add Portfolio</h2>
+
+    <form method="post">
+
+        <div class="form-group">
+            <label for="inputName">Name</label>
+            <input type="text" class="form-control" id="inputName" name="ProjectName">
+        </div>  <div class="form-group">
+            <label for="inputName">Details</label>
+            <input type="text" class="form-control" id="inputName" name="ProjectDetails">
+        </div>  <div class="form-group">
+            <label for="inputName">Properties</label>
+            <input type="text" class="form-control" id="inputName" name="Properties">
+        </div>  <div class="form-group">
+            <label for="inputName">Image</label>
+            <input type="text" class="form-control" id="inputName" name="Image">
+        </div>
+        <div class="form-group">
+            <label for="inputMail">Live Version Link</label>
+            <input type="text" class="form-control" id="inputMail" name="LiveVersion">
+        </div>
+        <div class="form-group">
+            <label for="inputSubject">Github Link</label>
+            <input type="text" class="form-control" id="inputSubject" name="GithubLink">
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>

@@ -1,0 +1,33 @@
+﻿
+@model ASP_MVC_CV_Prj.Models.Entity.Interests
+@{
+    ViewBag.Title = "GetInterest";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>GetInterest</h2>
+
+
+@{
+    ViewBag.Title = "GetCert";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <h2>Update Interests</h2>
+    <form method="post">
+
+        @Html.Label("ID")
+        @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+        <br />
+        @Html.Label("Interest")
+        @Html.TextBoxFor(x => x.Hobby, new { @class = "form-control" })
+        <br />
+        @Html.Label("Icon (font awesome 5)")
+        @Html.TextBoxFor(x => x.Icon, new { @class = "form-control" })
+        <br />
+       
+
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>

@@ -1,0 +1,153 @@
+﻿
+@keyframes blink {
+
+    from, to {
+        background-color: transparent
+    }
+
+    50% {
+        background-color: white;
+    }
+}
+
+/*contact modal*/
+.open-button {
+    background-color: #2251b2;
+    color: white;
+    padding: 12px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    opacity: 1;
+    position: fixed;
+    bottom: 50px;
+    right: 7%;
+    width: auto;
+    height: auto;
+    z-index: 15;
+}
+
+    .open-button:focus {
+        outline: none;
+    }
+
+.chat-popup {
+    position: fixed;
+    width: 23rem;
+    bottom: 23%;
+    right: 4rem;
+    border-radius: 16px;
+    padding: 21px;
+    border: 1px solid #fff;
+    background-color: white;
+    z-index: 9;
+}
+
+    .chat-popup > form {
+        margin: 10px;
+    }
+
+.modal-f {
+    display: none;
+    position: fixed;
+    z-index: 15;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* portfolio css */
+
+.portfolio-card-content {
+    background-color: white;
+}
+
+    .portfolio-card-content > img {
+        width: 100%;
+        display: block;
+        margin-left: auto;
+        max-height: 300px;
+        max-height: 185px;
+        object-fit: cover;
+        margin-right: auto;
+    }
+
+.portfolio-card {
+    /*width: 20%;*/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 20px 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+    .portfolio-card:hover .portfolio-card-hover {
+        visibility: visible;
+        opacity: 1;
+        transition-delay: 0s;
+    }
+
+    .portfolio-card h4 {
+        margin-top: 18px;
+        margin-bottom: 10px;
+    }
+
+.portfolio-card-hover {
+    position: absolute;
+    display: none;
+    visibility: hidden;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    /* efect1 */
+    opacity: 0;
+    transition: visibility 0s linear 0.2s, opacity 0.2s linear;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+}
+
+/* Skills */
+.dot {
+    height: 14px;
+    width: 14px;
+    margin-right: 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-fill {
+    height: 14px;
+    width: 14px;
+    margin-right: 4px;
+    background-color: #2251B2;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.d-bar {
+    margin-right: 14px;
+    margin-top: 2px;
+    height: auto;
+}
+
+/* contact button */
+.btn-primary-contact {
+    color: #fff;
+    background-color: #2251b2;
+    border-color: #fff;
+}
+
+    .btn-primary-contact:hover {
+        color: #fff;
+        background-color: #2251B2;
+        border-color: #fff;
+    }

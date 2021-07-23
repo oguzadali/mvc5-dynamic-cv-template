@@ -1,0 +1,24 @@
+﻿@model ASP_MVC_CV_Prj.Models.Entity.Certificates
+
+@{
+    ViewBag.Title = "GetCert";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <h2>Update Certificates</h2>
+    <form method="post">
+
+        @Html.Label("ID")
+        @Html.TextBoxFor(x => x.ID, new { @class = "form-control" , @readonly = "readonly" })
+        <br />
+        @Html.Label("Certificate Header")
+        @Html.TextBoxFor(x => x.Certificate, new { @class = "form-control" })
+        <br />
+        @Html.Label("Details")
+        @Html.TextBoxFor(x => x.Details, new { @class = "form-control" })
+        <br />
+        
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>

@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "AddCert";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container">
+    <h2>AddCertificate</h2>
+
+    <form method="post">
+
+        <div class="form-group">
+            <label for="inputName">Certificate</label>
+            <input type="text" class="form-control" id="inputName" name="Certificate">
+        </div>
+        <div class="form-group">
+            <label for="inputMail">Details</label>
+            <input type="text" class="form-control" id="inputMail" name="Details">
+        </div>    
+
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>

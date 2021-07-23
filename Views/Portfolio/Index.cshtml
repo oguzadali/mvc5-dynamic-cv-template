@@ -1,0 +1,47 @@
+﻿
+@using ASP_MVC_CV_Prj.Models.Entity
+@model List<Portfolio>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Portfolio List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Details</th>
+            <th scope="col">Properties</th>
+            <th scope="col">Image</th>
+            <th scope="col">Github</th>
+            <th scope="col">Live</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var d in Model)
+        {
+
+            <tr>
+                <th scope="row">@d.ID</th>
+                <td>@d.ProjectName</td>
+                <td>@d.ProjectDetails</td>
+                <td>@d.Properties</td>
+                <td>@d.Image</td>
+                <td>@d.GithubLink</td>
+                <td>@d.LiveVersion</td>
+                <td><a href="/Portfolio/GetPortfolio/@d.ID" class="btn btn-warning">Edit</a></td>
+                <td><a href="/Portfolio/DeletePortfolio/@d.ID" class="btn btn-danger">Delete</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+<a href="/Portfolio/AddPortfolio/" class="btn btn-info">Add New</a>

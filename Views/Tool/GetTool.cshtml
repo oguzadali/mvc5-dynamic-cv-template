@@ -1,0 +1,24 @@
+﻿@model ASP_MVC_CV_Prj.Models.Entity.Tools
+@{
+    ViewBag.Title = "Edit Tool";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container">
+    <h2>Update Tool</h2>
+    <form method="post">
+
+        @Html.Label("ID")
+        @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+        <br />
+        @Html.Label("Tool Detail")
+        @Html.TextBoxFor(x => x.Details, new { @class = "form-control" })
+        <br />
+        @Html.Label("Star (1-5)")
+        @Html.TextBoxFor(x => x.Star, new { @class = "form-control" })
+        <br />
+
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>

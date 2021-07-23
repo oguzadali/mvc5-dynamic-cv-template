@@ -1,0 +1,39 @@
+﻿
+@using ASP_MVC_CV_Prj.Models.Skill;
+@model ToolAndSkill
+
+<div class="resume-section-content">
+    <h2 class="mb-5">Skills</h2>
+    <div class="subheading mb-3">Programming Languages & Tools</div>
+    <ul style="list-style: none;" class="mb-4 p-0">     
+
+        @foreach (var d in Model.MTools)
+        {            
+            <li>             
+                <div class="d-flex">
+                    <div class="d-bar d-inline dots-@d.Star ">
+
+                    </div>
+                    <div class="d-inline">
+                        @d.Details
+
+                    </div>
+                </div>
+                
+            </li>
+            
+        }
+    </ul>
+
+    <div class="subheading mb-3">Workflow</div>
+    <ul class="fa-ul mb-0">
+        @foreach (var d in Model.MAbilities)
+        {
+            <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                @d.Ability
+            </li>
+        }
+
+    </ul>
+</div>

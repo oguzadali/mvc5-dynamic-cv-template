@@ -1,0 +1,24 @@
+﻿@model ASP_MVC_CV_Prj.Models.Entity.Admin
+
+@{
+    ViewBag.Title = "GetAdmin";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <h2>Update Admin</h2>
+    <form method="post">
+
+        @Html.Label("ID")
+        @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+        <br />
+        @Html.Label("Name")
+        @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+        <br />
+        @Html.Label("Password")
+        @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+        <br />
+
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>

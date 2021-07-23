@@ -1,0 +1,33 @@
+﻿@using ASP_MVC_CV_Prj.Models.Entity
+@model List<Certificates>
+
+
+
+<div class="resume-section-content">
+    <h2 class="mb-5">Awards & Certifications</h2>
+    <ul class="fa-ul mb-0">
+        @foreach (var d in Model)
+        {
+        <li>
+            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+            @d.Certificate    -    @d.Details
+        </li>
+        }
+      
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

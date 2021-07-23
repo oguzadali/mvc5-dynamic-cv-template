@@ -1,0 +1,39 @@
+﻿@using ASP_MVC_CV_Prj.Models.Entity
+@model List<Admin>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+
+
+
+<h2>Admins List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Username</th>
+            <th scope="col">Password</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var d in Model)
+        {
+            <tr>
+                <th scope="row">@d.ID</th>
+                <td>@d.UserName</td>
+                <td>@d.Password</td>
+
+                <td><a href="/Admin/GetAdmin/@d.ID" class="btn btn-warning">Edit</a></td>
+                <td><a href="/Admin/DeleteAdmin/@d.ID" class="btn btn-danger">Delete</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+<a href="/Admin/AddAdmin/" class="btn btn-info">Add New</a>

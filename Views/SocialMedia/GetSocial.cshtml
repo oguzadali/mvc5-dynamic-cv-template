@@ -1,0 +1,35 @@
+﻿@model ASP_MVC_CV_Prj.Models.Entity.SocialMediaLinks
+
+@{
+    ViewBag.Title = "GetSocial";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+<h2>Update Social</h2>
+ 
+    <form method="post">
+
+        @Html.Label("ID")
+        @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+        <br />
+        @Html.Label("Name")
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        <br />
+        @Html.Label("Link")
+        @Html.TextBoxFor(x => x.Link, new { @class = "form-control" })
+        <br />
+        @Html.Label("Show")
+        @*<input id="txtDesc2" name="txtDesc2" type="text" value="<% =x.Show %>" />*@
+        @Html.TextBoxFor(x => x.Show , new { @class = "form-control" })
+        <br />
+
+        @Html.Label("Icon")
+        @Html.TextBoxFor(x => x.Icon, new { @class = "form-control" })
+        <br />
+
+
+
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>

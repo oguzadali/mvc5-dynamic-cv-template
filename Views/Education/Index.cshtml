@@ -1,0 +1,47 @@
+﻿
+@using ASP_MVC_CV_Prj.Models.Entity
+@model List<Education>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Educations List</h2>
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Header</th>
+            <th scope="col">Subheader1</th>
+            <th scope="col">Subheader2</th>
+            <th scope="col">Date</th>
+           
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var d in Model)
+        {
+
+            <tr>
+                <th scope="row">@d.ID</th>
+                <td>@d.Header</td>
+                <td>@d.SubHeader1</td>
+                <td>@d.SubHeader2</td>
+                <td>@d.Date</td>
+                <td><a href="/Education/GetEdu/@d.ID" class="btn btn-warning">Edit</a></td>
+                <td><a href="/Education/DeleteEdu/@d.ID" class="btn btn-danger">Delete</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+<a href="/Education/AddEdu/" class="btn btn-info">Add New</a>
+

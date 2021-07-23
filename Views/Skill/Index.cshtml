@@ -1,0 +1,91 @@
+﻿@using ASP_MVC_CV_Prj.Models.Entity
+@model List<Abilities>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@{ string progressColor = "";}
+
+<h2>Skills</h2>
+
+<div class="">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Simple Full Width Table</h3>
+
+            <div class="card-tools">
+                <ul class="pagination pagination-sm float-right">
+                    <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body p-0">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width: 10px">#</th>
+                        <th scope="col">Task</th>
+                        <th scope="col">Progress</th>
+                        <th scope="col" style="width: 40px">Label</th>
+                        <th scope="col" >Edit</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var d in Model)
+                    {
+
+                        if (d.Progress >= 0 && d.Progress <= 50)
+                        {
+                            progressColor = "progress-bar bg-danger";
+                        }
+                          if (d.Progress >= 51 && d.Progress <= 70)
+                        {
+                            progressColor = "progress-bar bg-warning";
+                        }
+                          if (d.Progress >= 71 && d.Progress <= 84)
+                        {
+                            progressColor = "progress-bar bg-info";
+                        } 
+                        if (d.Progress >= 85 && d.Progress <= 100)
+                        {
+                            progressColor = "progress-bar bg-success";
+                        }
+
+
+
+                    <tr>
+                        <td>@d.ID</td>
+                        <td>@d.Ability</td>
+                        <td>
+                            <div class="progress progress-xs">
+                                <div class="@progressColor" style="width:@d.Progress "></div>
+                            </div>
+                        </td>
+                        <td><span class="badge bg-danger">@d.Progress</span></td>
+                        <td class="">
+                        <a href="/Skill/GetSkill/@d.ID"  class="btn btn-warning">Edit</a>
+                        
+                         <a href="/Skill/DeleteSkill/@d.ID" class="btn btn-danger">Delete</a>
+                        </td>
+                       
+                    </tr>
+                    }
+                    
+
+                </tbody>
+            </table>
+            <a href="/Skill/AddSkill/" class="btn btn-info">Add New Skill</a>
+        </div>
+        <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+
+</div>
